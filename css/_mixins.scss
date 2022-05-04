@@ -7,17 +7,20 @@
   }
 }
 
+@mixin flex{
+  display: flex;
+  // flex-direction: row;
+  // flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
 // ヘッダー固定
-@mixin fixed {
-  .header {
-    background-color: $main-color;
-    position: fixed;
-    width: 100%;
-    z-index: 100;
-    padding: 10px;
+@mixin header-inner {
+    padding: 10px 4vw;
     @include flex;
   }
-}
+
 
 // ファーストビュー画像
 @mixin fv {
@@ -48,7 +51,7 @@
 // ボタン
 @mixin btnStyle(
   $bg-color: $accent-color,
-  $color: $sub-color,
+  // $color: $sub-color,
   $padding: 10px 20px,
   $font-size: 1.8rem
 ) {

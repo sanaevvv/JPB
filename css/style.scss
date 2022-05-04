@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import 'mixins';
+@import 'valiables';
 @import 'main';
 
 html {
@@ -22,7 +23,8 @@ body {
 
 img,
 iframe{
-  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
   vertical-align: bottom;
 }
 source{
@@ -32,7 +34,7 @@ source{
 
 a {
   display: inline-block;
-  transition: 0.5s;
+  transition: initial;
   text-decoration: none;
   color: #333;
   &:hover {
@@ -54,20 +56,32 @@ section {
 .tablet-br {
   display: none;
   @include mq(tablet) {
-    display: block;
+  display: none;
   }
 }
 
 .container {
   max-width: 1100px;
-  width: 90%;
+  padding: 0 4vw;
   margin: 0 auto;
+}
+.external-link{
+  @extend .container;
+  padding: 30px 4vw;
 }
 
 // フォント、テキスト系
 .title {
-  font-size: clamp(18px, calc(18px + 1.5vw), 34px);
+  font-size: clamp(18px, calc(18px + 1.5vw), 24px);
   font-weight: bold;
-  text-align: center;
-  padding: 50px 10px;
+  margin: 50px 0;
+  color: $main-color;
+  border-bottom: 3px solid $main-color;
+}
+.inform-txt{
+  height: 300px;
+  border: 2px solid gray;
+}
+.mb-8vh{
+  margin-bottom: 8vh;
 }
