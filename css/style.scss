@@ -1,6 +1,5 @@
 @charset "UTF-8";
 @import 'mixins';
-@import 'valiables';
 @import 'main';
 
 html {
@@ -34,7 +33,7 @@ source{
 
 a {
   display: inline-block;
-  transition: initial;
+  transition: .5s;
   text-decoration: none;
   color: #333;
   &:hover {
