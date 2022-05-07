@@ -77,14 +77,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2vw;
+  gap: 1vw;
   position: relative;
   .nav-list-link{
   color: $main-color;
-  font-size: clamp(18px, 2vw, 24px);
+  font-size: clamp(16px, 2vw, 18px);
   }
   li:not(:last-child){
-    padding-right: 2vw;
+    padding-right: 1vw;
     border-right: 1px solid $main-color;
   }
 }
@@ -344,4 +344,61 @@ a[target="_blank"]{
   display: grid;
   grid-template-columns: max-content 1fr;
   column-gap: 20px;
+}
+
+.support-list{
+  padding: 10px 4vw;
+  counter-reset:support;
+  h2{
+    font-size: 120%;
+    padding-left: 20px;
+    color: $main-color;
+  }
+  li{
+    margin-bottom: 10px;
+    position: relative;
+    text-align: justify;
+    &:before{
+      position: absolute;
+      left:-20px;
+      content: counter(support);
+      counter-increment: support;
+      font-weight: bold;
+      color: #fff;
+      font-weight: bold;
+      width: 30px;
+      height: 30px;
+      border-radius: 999px;
+      background: $main-color;
+      text-align: center;
+      line-height: 30px;
+    }
+  }
+}
+.overview{
+  display: grid;
+  grid-template-columns: 150px 150px 1fr;
+  gap: 20px;
+  @include mq(tablet) {
+    grid-template-columns: max-content max-content 1fr;
+  }
+  li{
+    position: relative;
+  &::before{
+    content: "・";
+    position: absolute;
+    top: 0;
+    left:-15px;
+}
+}
+.column2{
+  grid-column: 2 / span 2;
+}
+}
+
+.color-main{
+  color: $main-color;
+  margin: 5vh 4vw;
+  text-align: center;
+  font-size: 120%;
 }
