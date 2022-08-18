@@ -33,7 +33,6 @@ source{
 
 a {
   display: inline-block;
-  transition: .5s;
   text-decoration: none;
   color: #333;
   &:hover {
@@ -84,4 +83,3 @@ section {
 .mb-8vh{
   margin-bottom: 8vh;
 }
-
