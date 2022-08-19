@@ -93,7 +93,7 @@
   position: relative; }
   .nav-list .nav-list-link {
     color: #9A292F;
-    font-size: clamp(16px, 2vw, 18px); }
+    font-size: clamp(16px, 1vw, 18px); }
   .nav-list li:not(:last-child) {
     padding-right: 1vw;
     border-right: 1px solid #9A292F; }
@@ -122,16 +122,17 @@
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  height: 500px;
+  height: 80vh;
   position: relative; }
   .first-view-img .first-view-desc {
     position: absolute;
     top: 30%;
     right: 20px;
-    left: 20px;
+    left: 45%;
     padding: 20px;
     background: #ffffffa8;
-    border-radius: 3px; }
+    border-radius: 3px;
+    color: #9A292F; }
   .first-view-img .first-view-circle {
     position: absolute;
     bottom: 2%;
@@ -149,18 +150,16 @@
     font-weight: bold;
     border: 5px solid #006bff4a; }
   .first-view-img .first-view-ttl {
+    font-weight: bold;
     position: absolute;
-    top: 10%;
+    top: 8%;
     left: 0;
     width: 100%;
     text-align: center;
-    font-size: clamp(50px, 2vw, 80px);
+    font-size: clamp(24px, 4vw, 46px);
     color: #9A292F;
-    text-shadow: 2px 2px 3px #3d0707ba;
+    text-shadow: 2px 3px 8px #fff;
     z-index: 10; }
-    @media screen and (max-width: 768px) {
-      .first-view-img .first-view-ttl {
-        font-size: clamp(40px, 2vw, 50px); } }
 
 .company-desc-wrapper {
   display: grid;
@@ -174,7 +173,7 @@
     text-align: justify;
     padding: 30px 4vw;
     background: #9A292F;
-    color: #fac4c7;
+    color: #f6d3d5;
     align-content: center;
     display: grid;
     line-height: 2.0; }
@@ -197,7 +196,7 @@
     position: absolute;
     right: 4vw;
     bottom: 30px;
-    background: #fac4c7;
+    background: #f6d3d5;
     padding: 10px 30px;
     color: #9A292F;
     border-radius: 9999px;
@@ -479,6 +478,26 @@ a[target="_blank"] {
 
 .font-bold {
   font-weight: bold; }
+
+.income-num-grid {
+  display: grid;
+  grid-template-columns: 30px 1fr 100px;
+  gap: 2vw;
+  text-align: justify;
+  padding: 30px 0; }
+  .income-num-grid span:nth-child(3n) {
+    text-align: right; }
+
+.income-technical-grid {
+  display: grid;
+  grid-template-columns: 100px 1fr 1fr;
+  gap: 2vw;
+  padding: 30px 0 100px 0; }
+
+.income-tech-ttl {
+  text-align: center;
+  font-weight: bold;
+  font-size: 110%; }
 
 html {
   box-sizing: border-box;
