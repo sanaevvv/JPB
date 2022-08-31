@@ -127,6 +127,8 @@
     color: #9A292F;
   }
   .first-view-circle{
+    backdrop-filter: blur(3px);
+    font-style: italic;
     position: absolute;
     bottom: 2%;
     color: #fff;
@@ -255,6 +257,10 @@
   li{
   position: relative;
   padding-left: 20px;
+  line-height: 1.3;
+  a{
+    font-size: 90%;
+  }
   &::before{
     content:">";
     position: absolute;
@@ -542,4 +548,16 @@ padding-top: 10px;
   text-align: center;
   font-weight: bold;
   font-size: 110%;
+}
+
+.technical-img-text{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2vw;
+}
+.technical-text{
+  text-align: justify;
+}
+.about-indonesia{
+  margin-top: 15px;
 }
