@@ -2,8 +2,8 @@
 @import 'valiables';
 
 .header {
- border-bottom: 1px solid $main-color;
- box-shadow: 1px 1px 2px #8080809e;
+//  border-bottom: 1px solid $main-color;
+//  box-shadow: 1px 1px 2px #8080809e;
   .header-inner{
   @include header-inner;
   }
@@ -321,6 +321,32 @@
     }
   }
 }
+.content-support{
+   display: grid;
+ grid-template-columns: repeat(4,1fr);
+ grid-template-rows: 100px;
+ gap: 10px;
+ li{
+  width: 100%;
+  height: 100%;
+  place-items: center;
+  display: grid;
+  padding: 10px;
+  color: #fff;
+ }
+  li:nth-child(1) {
+background:brown;
+ }
+ li:nth-child(2) {
+background:blue;
+ }
+  li:nth-child(3) {
+background:green;
+ }
+  li:nth-child(4) {
+background:orange;
+ }
+}
 .image-text{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -387,7 +413,7 @@ a[target="_blank"]{
   }
     li:not(.product-item > li){
       display: grid;
-      grid-template-rows: 300px 80px minmax(100px, 1fr) auto auto;
+      grid-template-rows: 300px 70px minmax(100px, 1fr) auto auto;
       letter-spacing: 0.02em;
       gap: 8px;
       background: #9a292f0a;
@@ -397,7 +423,6 @@ a[target="_blank"]{
     letter-spacing: .02em;
       img{
         width: 100%;
-        aspect-ratio: 5/3;
         height: -webkit-fill-available;
       }
       p{
@@ -408,8 +433,7 @@ a[target="_blank"]{
 .product-title{
   color: $main-color;
   font-weight: bold;
-  padding-top: 10px;
-  line-height:1.5;
+  line-height:1.4;
   @include mq(sp) {
    line-height: 1.3;
     align-self: center;
@@ -531,6 +555,7 @@ padding-top: 10px;
   display: grid;
   grid-template-columns: 30px 1fr 100px;
   gap: 2vw;
+  row-gap: 1vh;
   text-align: justify;
   padding: 30px 0;
   span:nth-child(3n){
@@ -542,22 +567,98 @@ padding-top: 10px;
   display: grid;
   grid-template-columns: 100px 1fr 1fr;
   gap: 2vw;
-  padding: 30px 0 100px 0;
+  row-gap: 1vh;
+  padding: 30px 0 0 0;
+  align-items: center;
+    line-height: 1.3;
 }
 .income-tech-ttl{
   text-align: center;
   font-weight: bold;
   font-size: 110%;
+  background: #9a292f;
+  color: #fff;
+  padding: 5px;
 }
-
+.income-tech-ttl-row{
+  color: #fff;
+    background: #9A292F;
+    padding: 5px 10px;
+    font-size: 90%;
+    line-height: 1.3;
+    align-self: center;
+}
 .technical-img-text{
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2vw;
+  // grid-template-columns: repeat(2, 1fr);
+  // gap: 2vw;
 }
 .technical-text{
   text-align: justify;
 }
 .about-indonesia{
   margin-top: 15px;
+}
+
+.support-text{
+  margin: 30px 0;
+}
+
+.img-perform{
+  aspect-ratio: 3/2;
+}
+
+.img-perform-text{
+font-weight: bold;
+margin-top: 10px;
+font-size: 110%;
+text-align: center;
+}
+.other-business{
+  border: 1px solid $main-color;
+    padding: 10px 20px;
+    color: $main-color;
+}
+
+.text-indent{
+  padding-left: 20px;
+}
+
+.free-consul{
+  background-color: #4b6e2d;
+  color: #c8e62f;
+  border-radius: 5px;
+  padding: 10px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #000;
+  font-size: 110%;
+  width: min(90%, 360px);
+  margin: 0 auto 30px;
+}
+.footer-link{
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+
+}
+.recruit-attention{
+  font-weight: bold;
+  margin-top: 30px;
+}
+// .recruit-attention-wrapper{
+//   margin-bottom: 50px;
+// }
+.recruit-attention-list{
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  margin-bottom: 30px;
+  li{
+    display: contents;
+  }
+}
+
+.nav-wrapper{
+  padding-top: 100px;
 }
