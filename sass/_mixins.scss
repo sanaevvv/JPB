@@ -13,13 +13,13 @@
   align-items: center;
 }
 
-// ヘッダー固定
+// ヘッダ
 @mixin header-inner {
     padding: 10px 4vw;
-    position: fixed;
-    width: 100%;
-    left: 0;
-    right: 0;
+    // position: fixed;
+    // width: 100%;
+    // left: 0;
+    // right: 0;
     border-bottom: 1px solid $main-color;
     @include flex;
   }
